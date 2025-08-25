@@ -3,7 +3,7 @@ import { Hero,Footer,CustomerReviews,SpecialOffer,SupperQuality,Subscribe,Servic
 const App = () => (
   <main className="relative">
     <Nav/>
-    <section className="xl:padding-l wide:padding-r padding-b"><Hero/></section>
+    <section className="xl:padding-l wide:padding-r padding-b "><Hero/></section>
     <section className="padding"><PopularProduct/></section>
     <section className="padding"><SupperQuality/></section>
     <section className="padding-x py-10"><Services/></section>

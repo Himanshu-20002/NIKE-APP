@@ -56,3 +56,8 @@
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
 }
+
+.liquidChrome-container {
+  width: 100%;
+  height: 100%;
+}
