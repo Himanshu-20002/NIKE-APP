@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.js";
 import "./index.css";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 
 const lenis = new Lenis({
   duration: 1.2, // smoothness

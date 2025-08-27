@@ -9,10 +9,10 @@ const SupperQuality = () => {
     >
       <div className="flex flex-1 flex-col">
         <h1 className=" mt-10 font-palanquin text-4xl capitalize font-bold">
-          <h2 className="inline-block">
+          <span className="inline-block">
             We Provide You
             <span className="text-coral-red"> Super</span>
-          </h2>
+          </span>
           <br />
           <span className="text-coral-red">Quality</span> Shoes
         </h1>
