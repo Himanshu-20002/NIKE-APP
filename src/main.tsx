@@ -1,10 +1,24 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.js";
+import "./index.css";
+import Lenis from "@studio-freight/lenis";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+const lenis = new Lenis({
+  duration: 1.2, // smoothness
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easing function
+  smoothWheel: true,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
-)
+  </React.StrictMode>
+);

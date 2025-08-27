@@ -9,6 +9,7 @@ const Nav = () => {
       <nav className="flex justify-between items-center max-container">
         <a href="/">
           <img src={headerLogo} alt="Logo" width={130} height={29}></img>
+        
         </a>
         <ul className="flex flex-1 justify-center items-center gap-16 max-lg:hidden">
             {navLinks.map((items)=>(
