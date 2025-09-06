@@ -24,3 +24,169 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.liquidChrome-container {
+  width: 100%;
+  height: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+
+.info{
+  font:montserrat,
+}
+
+ .max-container {
+    max-width: 1740px;
+    margin: 0 auto;
+  }
+
+
+
+section:not(#services) {
+  position: relative;
+  width: 100vw;
+  /* height: 100vh; */
+  overflow: hidden;
+}
+
+ .intro,.outro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0d0d;
+  color: azure;
+  padding: 2rem;
+ }
+
+ .header-1{
+  position: relative;
+  width: 500vw;
+  height: 100vh;
+  transform: translateX(0%);
+  overflow-x: auto;
+  gap: 1vh;
+  color:#0a0a0a;
+  
+
+ }
+ .header-2{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 370vw;
+  color: #e0dfdf;
+  transform: translateX(100%);
+  z-index: 2;
+  gap:5vh;
+ }
+ .header-1,.header-2{
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+ }
+ .header-1 h1{
+  width: 100%;
+  font-size: 15vw;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  white-space: nowrap;   
+  color:#0a0a0a;
+  height: auto;
+  
+
+ }
+ .header-2 h2{
+  width: 100%;
+  font-size: 15vw;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  white-space: nowrap;   
+  color: #e0dfdf;
+  height: auto;
+  
+ }
+
+
+ .circular-mask{
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: #0d0d0d;
+  clip-path:circle(0% at 50% 50%);
+ }
+ .tooltips{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width: 75%;
+  height: 75%;
+  display: flex;
+  gap:15rem;
+ }
+ .ribbons-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+ .tooltip{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: azure;
+ }
+ .tooltip:nth-child(2){
+  justify-content: flex-end;
+  align-items: flex-end;
+
+ }
+
+ .tooltip .divider{
+  position:relative;
+  width:100%;
+  height:1px;
+  background-color: #ffffff;
+  margin:0.5rem 0;
+  transform:scaleX(0);
+
+ }
+ .tooltip:nth-child(1) .divider{
+  transform-origin: right center;
+
+ }
+ .tooltip:nth-child(2) .divider{
+  transform-origin: left center;
+ }
+ .toltip .icon{
+  font-size:5.5rem;
+  overflow: hidden;
+ }
+ .tooltip .description{
+  color: rgb(109, 109, 109);
+ }
+
+ /* now to prep for animation  we wll assgn specific classname to tl header description */
+ .tooltip:nth-chld(2).icon,
+ .tooltip:nth-child(2).title,
+ .tooltip .description{
+  width: 90%;
+ }
+ .header-1 h1 .char,
+ .toltip.title.line{
+  display:inline-block;
+  overflow:hidden;
+ }
+
+ .header-1 h1 .char > span,
+ .toltip .icon ion-icon,
+ .tooltip .title .line > span,
+ .tooltip .description .line > span{
+  position: relative;
+  display: block;
+  transform: translateY(100%);
+  will-change: transform;
+ }
