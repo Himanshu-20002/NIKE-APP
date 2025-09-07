@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="max-container ">
       <div className="flex justify-between items-start  gap-20 flex-wrap max-lg:flex flex-col max-sm:p-5">
         <a href="/">
-          <Image src={footerLogo} width={150} height={46} />
+          <Image alt={"img"} src={footerLogo} width={150} height={46} />
         </a>
         <p className="mt-6 text-base leading-7 font-monstrate sm: max-w-sm text-white">
           Get shoes ready for the new term at your nearest Nike store. Fined
@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="flex item-center mt-3 gap-5">
           {socialMedia.map((icon ,i) => (
             <div key={i} className="flex items-center w-12 h-12 justify-center bg-white rounded-full">
-              <Image src={icon.src} width={24} height={24} />
+              <Image alt={"img"} src={icon.src} width={24} height={24} />
             </div>
           ))}
         </div>

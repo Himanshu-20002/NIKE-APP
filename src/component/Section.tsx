@@ -26,9 +26,7 @@ const Section = () => {
 
   const { contextSafe } = useGSAP();
 
-  useEffect(() => {
-     console.log("GSAP contextSafe:", modelRef.current);
-  }, []);
+
   useGSAP(() => {
    
 
@@ -65,16 +63,16 @@ const Section = () => {
         trigger: 0.65,
         elements: [
           ".tooltip:nth-child(1) .icon div",
-          ".tooltip:nth-child(1) .title .line > span",
-          ".tooltip:nth-child(1) .description .line > span",
+          // ".tooltip:nth-child(1) .title .line > span",
+          // ".tooltip:nth-child(1) .description .line > span",
         ],
       },
       {
         trigger: 0.65,
         elements: [
           ".tooltip:nth-child(2) .icon div",
-          ".tooltip:nth-child(2) .title .line > span",
-          ".tooltip:nth-child(2) .description .line > span",
+          // ".tooltip:nth-child(2) .title .line > span",
+          // ".tooltip:nth-child(2) .description .line > span",
         ],
       },
     ];
@@ -138,10 +136,10 @@ const Section = () => {
             : progress > 0.5
               ? -200
               : 100 - 300 * header2Progress;
-        gsap.to(".header-2", {
-          xPercent: header2Xpercent,
-          y: "100%",
-        });
+        // gsap.to(".header-2", {
+        //   xPercent: header2Xpercent,
+        //   y: "100%",
+        // });
 
         const scaleX =
           progress < 0.45
