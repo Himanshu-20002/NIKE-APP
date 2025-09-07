@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-
+import * as THREE from "three";
 
 
 import { SiNike } from 'react-icons/si';
@@ -22,12 +22,12 @@ const Section = () => {
   // const header2Ref = useRef<HTMLHeadingElement>(null); // Add this ref
   // const titleH2Ref = useRef<HTMLHeadingElement>(null); // for ".tooltip .title h2"
   const descriptionPRef = useRef<HTMLParagraphElement>(null); // for ".tooltip .description p"
-  const modelRef = useRef<HTMLParagraphElement>(null);
+  const modelRef = useRef<THREE.Object3D | null>(null);
 
 
 
   useGSAP(() => {
-   
+
 
     if (!header1Ref.current || !descriptionPRef.current)
       return;
@@ -51,7 +51,7 @@ const Section = () => {
       char.innerHTML = `<span>${char.innerHTML}</span>`;
     });
 
-    [ ...descriptionSplits.lines].forEach((line) => {
+    [...descriptionSplits.lines].forEach((line) => {
       line.innerHTML = `<span>${line.innerHTML}</span>`;
     });
 
@@ -142,14 +142,14 @@ const Section = () => {
 
         const scaleX =
           progress < 0.45
-              ? 0
-              : progress > 0.65
+            ? 0
+            : progress > 0.65
               ? 100
               : 100 * ((progress - 0.45) / 0.2);
         gsap.to(".tooltip .divider", { scaleX: `${scaleX}%`, ...animOptions });
 
 
-         if (modelRef.current) {
+        if (modelRef.current) {
           gsap.to(modelRef.current.rotation, {
             y: progress * Math.PI * 2, // Rotate the model based on progress
             duration: 0.5,
@@ -200,12 +200,12 @@ const Section = () => {
           </h1>
           <h1 className="text-10xl">
             <span className="  bg-clip-text text-[5vw]">
-              just 
+              just
             </span>
             <span className="bg-clip-text text-[7vw]">
               Do it
             </span>
-             
+
           </h1>
 
           {/* <h1>stunning 🌀visual </h1> */}
@@ -221,8 +221,8 @@ const Section = () => {
         </div>
         <div className="tooltips">
           <div className="tooltip">
-            <div  className="icon flex-row">
-              <div  className="flex flex-row justify-start gap-10 ">
+            <div className="icon flex-row">
+              <div className="flex flex-row justify-start gap-10 ">
                 <SiNike />
                 <SiNike />
                 <SiNike />
