@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from "react";
+import React from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -8,7 +8,7 @@ import { SplitText } from "gsap/SplitText";
 
 
 import { SiNike } from 'react-icons/si';
-import { IoLogoNodejs } from "react-icons/io5";
+
 import { ModelCanvas } from "../components/3d/Model2";
 
 
@@ -19,12 +19,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Section = () => {
   const header1Ref = useRef<HTMLHeadingElement>(null);
-  const header2Ref = useRef<HTMLHeadingElement>(null); // Add this ref
-  const titleH2Ref = useRef<HTMLHeadingElement>(null); // for ".tooltip .title h2"
+  // const header2Ref = useRef<HTMLHeadingElement>(null); // Add this ref
+  // const titleH2Ref = useRef<HTMLHeadingElement>(null); // for ".tooltip .title h2"
   const descriptionPRef = useRef<HTMLParagraphElement>(null); // for ".tooltip .description p"
   const modelRef = useRef<HTMLParagraphElement>(null);
 
-  const { contextSafe } = useGSAP();
 
 
   useGSAP(() => {
@@ -129,13 +128,13 @@ const Section = () => {
         gsap.to(".circular-mask", {
           clipPath: `circle(${maskSize}% at 50% 50%)`,
         });
-        const header2Progress = (progress - 0.15) / 0.35;
-        const header2Xpercent =
-          progress < 0.15
-            ? 100
-            : progress > 0.5
-              ? -200
-              : 100 - 300 * header2Progress;
+        // const header2Progress = (progress - 0.15) / 0.35;
+        // const header2Xpercent =
+        //   progress < 0.15
+        //     ? 100
+        //     : progress > 0.5
+        //       ? -200
+        //       : 100 - 300 * header2Progress;
         // gsap.to(".header-2", {
         //   xPercent: header2Xpercent,
         //   y: "100%",
