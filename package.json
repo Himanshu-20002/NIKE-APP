@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-   "build": "next build && cp -r .next dist",
+    "build": "next build && shx cp -r .next dist",
     "start": "next start",
     "lint": "eslint"
   },
@@ -29,6 +29,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.0",
+    "shx": "^0.4.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
