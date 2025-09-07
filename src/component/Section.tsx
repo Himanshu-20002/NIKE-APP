@@ -169,8 +169,6 @@ const Section = () => {
                 stagger: 0.025,
               });
 
-            } else {
-              console.warn(`GSAP target ${selector} not found`);
             }
           });
         });
@@ -185,10 +183,10 @@ const Section = () => {
     };
   }, []);
 
-  const titleClass =
-    "text-6xl font-bold text-white justify-center item-center ";
-  const h1 =
-    "text-black absolute top-50% left-50% text-[9vw] italic will-change-transform   translate(-50%, -50%)";
+  // const titleClass =
+  //   "text-6xl font-bold text-white justify-center item-center ";
+  // const h1 =
+  //   "text-black absolute top-50% left-50% text-[9vw] italic will-change-transform   translate(-50%, -50%)";
   return (
     <div>
       <section className="product-overview bg-white">
